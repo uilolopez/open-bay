@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/noto/noto.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css/') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css/') }}"> 
+</head>
+<body>
+    <div class="container__main">
+        <div class="container__sec container__sec__info container__sec__info__contact">
+            <div class="container__form__contact">
+                <div class="container__text div__container__text__h1">
+                <div class="container__img__super__main">
+                    <img class="img__super__main" src="{{ url_for('static', filename='img/icon/ship__main__2.ico') }}" alt="image of a ship that is the loge">
+                </div>
+                    <h1>OpenBay</h1>
+                </div>
+            <img class="img__email__contact" src="{{ url_for('static', filename='img/email__contact.png/') }}" alt="image of a email in page contact">
+                
+            </div>
+            <main class="container__sec container__sec__form">
+                    <form method="POST" action="/send__cuestion" class="form form__main__singup">
+                        <h2 class="h2__text__Form" >Contactanos</h2>
+                        <input id="email__main" name="email__message" required class="input__form__main" type="email" placeholder="Email">
+                        <input id="text__user" name="text__message" required class="input__form__main" type="text" placeholder="Cuestion">
+                        <button class="button__main__singup" type="submit">Send</button>
+                    </form>
+            </main>
+        </div>
+        <footer class="container__footer">
+            <p class="p__footer__copy">
+                &copy; 2024 OpenBay. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

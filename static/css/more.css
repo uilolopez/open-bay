@@ -1,0 +1,40 @@
+/* Estilo oscuro similar al de Twitter */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container__more {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #070b0f;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.container__more h2 {
+    font-size: 24px;
+    color: #1DA1F2;
+    margin-bottom: 15px;
+    font-family: nuber;
+}
+
+.container__more p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+.container__more a {
+    color: #66AFE9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container__more a:hover {
+    text-decoration: underline;
+}

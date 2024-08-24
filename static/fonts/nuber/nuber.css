@@ -1,0 +1,51 @@
+@font-face {
+    font-family: nuber;
+    src: url("Nuber-Next/NuberNextWide-Regular-BF63c8a0fb8964c.otf") format(truetype);
+    font-weight: 200;
+}
+@font-face {
+    font-family: nuber;
+    src: url("Nuber-Next/NuberNextWide-DemiBold-BF63c8a0f895ee5.otf") format(truetype);
+    font-weight: 400;
+}
+@font-face {
+    font-family: nuber;
+    src: url("Nuber-Next/NuberNextWide-Bold-BF63c8a0fa7cb13.otf") format(truetype);
+    font-weight: 600;
+}
+@font-face {
+    font-family: nuber;
+    src: url("Nuber-Next/NuberNextWide-Heavy-BF63c8a0e586de8.otf") format(truetype);
+    font-weight: 800;
+}
+@font-face {
+    font-family: nuber;
+    src: url("Nuber-Next/NuberNextWide-Black-BF63c8a0fb7ef79.otf") format(truetype);
+    font-weight: 1000;
+}
+/*-----------------fuentes con extend---------------*/
+@font-face {
+    font-family: nuber-extend;
+    src: url("Nuber-Next/NuberNextExtended-Regular-BF63c8a0b24c1b4.otf") format(truetype);
+    font-weight: 200;
+}
+@font-face {
+    font-family: nuber-extend;
+    src: url("Nuber-Next/NuberNextExtended-DemiBold-BF63c8a0e888b52.otf") format(truetype);
+    font-weight: 400;
+}
+@font-face {
+    font-family: nuber-extend;
+    src: url("Nuber-Next/NuberNextExtended-Bold-BF63c8a0fc0a590.otf") format(truetype);
+    font-weight: 600;
+}
+@font-face {
+    font-family: nuber-extend;
+    src: url("Nuber-Next/NuberNextExtended-Heavy-BF63c8a09da349c.otf") format(truetype);
+    font-weight: 800;
+}
+@font-face {
+    font-family: nuber-extend;
+    src: url("Nuber-Next/NuberNextExtended-Black-BF63c8a0e8466f8.otf") format(truetype);
+    font-weight: 1000;
+}

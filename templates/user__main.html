@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+{% block contend__main %}
+    <div id="content-container" class="container__grid">
+
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__1.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>Bored yatch one</h3>
+                <p class="p__collection">Bored Yatch</p>
+                <p class="p__description">primera edicion de coleccion</p>
+                <p class="p__price">$???</p>
+                <button class="button__buy__token button__coming">Coming Soon</button>
+            </div>
+        </div>
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__2.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>The Two</h3>
+                <p class="p__collection">Bored Yatch</p>
+                <p class="p__description">segunda edicion</p>
+                <p class="p__price">$???</p>
+                <button class="button__buy__token button__coming">Coming Soon</button>
+            </div>
+        </div>
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__3.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>The Rainbow</h3>
+                <p class="p__collection">Bored Yatch</p>
+                <p class="p__description">Tercera edicon</p>
+                <p class="p__price">$???</p>
+                <button class="button__buy__token button__coming">Coming Soon</button>
+            </div>
+        </div>
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__4.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>World of ice</h3>
+                <p class="p__collection">Dreams</p>
+                <p class="p__description">primera edicion</p>
+                <p class="p__price">?$$$</p>
+                <button class="button__buy__token button__coming">Coming Soon</button>
+            </div>
+        </div>
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__5.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>Tomorrow Land</h3>
+                <p class="p__collection">Dreams</p>
+                <p class="p__description">Segunda edicion</p>
+                <p class="p__price">$???</p>
+                <button class="button__buy__token button__coming">Comign Soon</button>
+            </div>
+        </div>
+        <div class="card__token">
+            <img class="img__card" src="{{url_for('static', filename='img/collections/comingsoon/coming__6.avif')}}" alt="image of token">
+            <div class="container__card__text">
+                <h3>Candyland</h3>
+                <p class="p__collection">Dreams</p>
+                <p class="p__description">Tercera edicion</p>
+                <p class="p__price">$???</p>
+                <button class="button__buy__token button__coming">Coming Soon</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{%block jscripts%}
+    <script src="{{ url_for('static', filename='js/load__cards.js') }}"></script>
+{%endblock%}

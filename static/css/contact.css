@@ -1,0 +1,29 @@
+.container__main{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+
+}
+.h3__text__plus{
+    margin: 0 auto;
+}
+.container__main{
+    height: 100vh;
+    flex-direction: row;
+}
+.img__email__contact{
+    margin: 50px 30px;
+}
+.container__sec__info__contact{
+    display: flex;
+    flex-direction: row;
+}
+.container__sec__form{
+    margin: 60px 20px;
+    width: 50vw;
+}

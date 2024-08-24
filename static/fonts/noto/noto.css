@@ -1,0 +1,62 @@
+@font-face {
+    font-family: noto;
+    src: url("noto/NotoSans-Medium.ttf") format(truetype);
+    font-weight: 500;
+}
+@font-face {
+    font-family: noto-ligth;
+    src: url("noto/NotoSans-Regular.ttf") format(truetype);
+    font-weight: 300;
+}
+@font-face {
+    font-family: noto-extra-regular;
+    src: url("noto/NotoSans-Light.ttf") format(truetype);
+    font-weight: 150;
+}
+@font-face {
+    font-family: noto-bold;
+    src: url("noto/NotoSans-Bold.ttf") format(truetype);
+    font-weight: 700;
+}
+@font-face {
+    font-family: noto-extra-bold;
+    src: url("noto/NotoSans-Black.ttf") format(truetype);
+    font-weight: 900;
+}
+/*-----------------fuentes con condensador---------------*/
+@font-face {
+    font-family: noto-noraml-condensed;
+    src: url("noto/NotoSans_SemiCondensed-Medium.ttf") format(truetype);
+    font-weight: 500;
+}
+@font-face {
+    font-family: noto-ligth-condensed;
+    src: url("noto/NotoSans_SemiCondensed-ExtraLight.ttf") format(truetype);
+    font-weight: 200;
+}
+@font-face {
+    font-family: noto-bold-condensed;
+    src: url("noto/NotoSans_SemiCondensed-SemiBold.ttf") format(truetype);
+    font-weight: 700;
+}
+@font-face {
+    font-family: noto-extra-bold-condensed;
+    src: url("noto/NotoSans_SemiCondensed-ExtraBold.ttf") format(truetype);
+    font-weight: 900;
+}
+/*---------------------------fuentes italicas----------------------------*/
+@font-face {
+    font-family: noto-noraml-italic;
+    src: url("noto/NotoSans-SemiBoldItalic.ttf") format(truetype);
+    font-weight: 500;
+}
+@font-face {
+    font-family: noto-ligth-italic;
+    src: url("noto/NotoSans_Condensed-Italic.ttf") format(truetype);
+    font-weight: 200;
+}
+@font-face {
+    font-family: noto-bold-italic;
+    src: url("noto/NotoSans-ExtraBoldItalic.ttf") format(truetype);
+    font-weight: 900;
+}

@@ -1,0 +1,46 @@
+
+.card__token__trendind{
+    min-width: 80%;
+    max-width: 80%;
+    max-height: 36vh;
+    background-color: #1b1b1b81;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 5px 0 #ffffff;
+    transition-property: box-shadow, min-width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.img__card__trengind{
+    max-height: 90%;
+    max-width: 51%;
+    border-radius: 7px;
+}
+.container__card__text__trendind{
+    font-family: nuber;
+    color: #ffffff;
+}
+.p__collection__trending{
+    color: #3b3c3dab;
+}
+.p__description__trending{
+    color: #635e5e;
+}
+.p__price__trending{
+    color: #1b48aa;
+}
+.button__buy__token_trending{
+    background-color: #1b48aa;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    min-height: 15px;
+}
+/*------transiciones--------*/
+.card__token__trendind:hover{
+    box-shadow: 0 0 12px 0 #134ecc;
+    min-width: 85%;
+}

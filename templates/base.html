@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='img/icon/ship__main__2.ico') }}" type="image/png">
+    <title>{%block title%}Bienvenido  {%endblock%} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/noto/noto.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user__main.css/') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/nuber/nuber.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/trending.css/') }}">
+    {%block styles%}{%endblock%}
+</head>
+<body>
+    <div class="main__container">
+        <div class="container__super__nav">
+        <nav class="nav__main__user">
+            <div class="container__text div__container__text__h1">
+                <div class="container__img__super__main">
+                    <img class="img__super__main" src="{{ url_for('static', filename='img/icon/ship__main__2.ico') }}" alt="image of a ship that is the loge">
+                </div>
+                <h1>OpenBay</h1>
+            </div>
+            <div class="container__nav__items">
+                <div class="item__nav__main__user">
+                    <div class="container__ico__nav">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/home__main.ico') }}" alt="icono of home from the main navegator">
+                    </div>
+                    <a class="a__nav__main" href="{{ url_for('home') }}">Home</a>
+                </div>
+                <div class="item__nav__main__user">
+                    <div class="container__ico__nav">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/user__main.ico') }}" alt="icono of profile from the main navegator">
+                    </div>
+                    <a class="a__nav__main" href="{{ url_for('user') }}">User</a>
+                </div>
+                <div class="item__nav__main__user">
+                    <div class="container__ico__nav">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/more__main.ico') }}" alt="icono of more from the main navegator">
+                    </div>
+                    <a class="a__nav__main" href="{{ url_for('more') }}">More</a>
+                </div> 
+                <div class="item__nav__main__user">
+                    <div class="container__ico__nav">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/logout.ico') }}" alt="icono of more from the main navegator">
+                    </div>
+                    <a class="a__nav__main" href="{{ url_for('logout') }}">Logout</a>
+                </div>             
+            </div>
+        </nav>
+        </div>
+        <div class="simple__ninear_y"></div>
+        <main class="container__main__user">
+            {%block contend__main%} {%endblock%}
+        </main>
+        <div class="simple__ninear_y"></div>
+        <div class="container__sub__user container__tendences">
+            <div class="container__trending__main">
+                <div class="container__ico__trending">
+                    <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/ten__main.ico') }}" alt="icono of home from the main navegator">
+                    <h2 class="h2__text__trending">Trending</h2>
+                </div>
+                
+                <div class="container__trending">
+                    <p class="p__text__trending">
+                        Lo Mas Valuado y Seguro
+                    </p>
+                    {% for token__trending in cards__trending %}
+                        <div class="card__token__trendind">
+                            <img class="img__card__trengind" src={{token__trending.url}} alt="image of token">
+                            <div class="container__card__text__trendind">
+                                <h3>{{token__trending.title}}</h3>
+                                <p class="p__collection__trending">{{token__trending.collection}}</p>
+                                <p class="p__description__trending">{{token__trending.description}} </p>
+                                <p class="p__price__trending">${{token__trending.price}}.00 </p>
+                                <form action="/buy__token" method="post" >
+                                    <button type="submit" class="button__buy__token_trending button__coming">Buy</button>
+                                    <input type="hidden" name="hidden__key" value={{token__trending.key}}>
+                                </form>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {%block jscripts%}{%endblock%}
+</body>
+</html>

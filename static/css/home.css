@@ -1,0 +1,110 @@
+.container__grid {
+    width: 99%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #000;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+/*--------card----------*/
+
+.card__token {
+    max-width: 30%;
+    min-width: 30%;
+    height: 60vh;
+    border: 2px solid #fff;
+    margin: 10px;
+    border-radius: 9px;
+    box-shadow: 0 0 3px 0 #ffffffaf;
+    background-color: #111111ad;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: noto;
+    font-weight: 400;
+    position: relative; /* Aseguramos que la posición sea relativa */
+    left: 0; /* Definimos el valor inicial */
+    bottom: 0; /* Definimos el valor inicial */
+    transition-property: left, bottom, box-shadow, background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.card__token:hover {
+    box-shadow: 0 0 15px 0 #173ad4, 0 0 10px 0 #eeeeee;
+    left: 10px;
+    bottom: 30px;
+    background-color: #080808d0;
+}
+
+.img__card{
+    height: 65%;
+    max-height: 65%;
+    max-width: 95%;
+    margin: 3px auto;
+
+}
+.container__card__text{
+    max-height: 39%;
+    font-size: 2vh;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.form__buy{
+    display: flex;
+    min-width: 95%;
+}
+
+.button__buy__token{
+    border: none;
+    border-radius: 9px;
+    max-width: 200px;
+    height: 27px;
+    min-width: 82%;
+    background-color: #2049ff;
+    color: #fff;
+    font-family: noto;
+    margin: auto;
+    margin-top: 20px;
+}
+.button__coming{
+    margin: auto;
+    min-width: 81%;
+    margin-top: 15px;
+}
+
+p,h3{
+    margin: 0 2px;
+    padding: 0;
+}
+h3{
+    font-size: 3vh;
+}
+.p__collection{
+    color: #3a3a3a;
+}
+.p__description{
+    color: #5f5e5e;
+}
+.p__price{
+    color: #2049ff;
+}
+/*---------hover---------*/
+.button__buy__token:hover{
+    background-color: #4d64cc;
+}
+
+.button__coming:hover{
+    background-color:#3a3a3a ;
+    color: #fff;
+}

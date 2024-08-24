@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}bienvenido {{username}} {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+{% block contend__main %}
+    <div class="container__user">
+        <div class="container__profile">
+            <div class="container__profile__l">
+                <h2 class="h2__username">
+                    <img class="img__icon__nav user__i" src="{{ url_for('static', filename='img/icon/admin.ico') }}" alt="icono of home from the main navegator">
+                    Admin {{username}}
+                </h2>
+                <p class="p__profile__email">
+                    {{email}}
+                </p>
+            </div>
+            <div class="container__profile__r">
+                <p class="p__profile__cripto">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/dogecoin.ico') }}" alt="icono of home from the main navegator">
+                    {{cripto}}.00
+                </p>
+                <p class="p__profile__email">
+                    Admin Status: {{admin}}
+                </p>
+            </div>
+        </div>
+        <div class="simple__ninear__x"></div> 
+        <div class="container__opacity"></div> 
+        <div class="container__items container__items__admin">
+            <h2 class="h2__subtitle">Mail</h2>
+            <div class="container__admin__sec admin__mails">
+                {% for message in datos__mails %}
+                    <div class="card__message">
+                        <h3 class="h3__email__text">usuario: {{message.email}} </h3>
+                        <p class="p__email__text">mensaje: {{message.message}} </p>
+                        <form action="/delete__mail" method="POST" >
+                            <button type="submit" class="button__delete__message ">Delete</button>
+                            <input type="hidden" name="hidden__id" value={{message.id}}>
+                        </form>
+                    </div>
+                    
+                {% endfor %}
+            </div>
+
+            <h2 class="h2__subtitle">Users</h2>
+            <div class="container__admin__sec admin__users">
+                {% for datos__user in datos__users%}
+                    <div class="card__user">
+                        <img class="img__icon__admin" src="{{ url_for('static', filename='img/icon/user__main.ico') }}" alt="icono of home from the main navegator">
+                        <div class="container__card__text">
+                            <h3>{{datos__user.username}}</h3>
+                            <p class="p__email__user">{{datos__user.email}}</p>
+                            <p class="p__admin__user"> Admin:{{datos__user.admin}}</p>
+                            <p class="p__cripto">${{datos__user.cripto}}.00 </p>
+                            <form action="/act__valance" method="post" >
+                                <input type="hidden" name="hidden__email" value={{datos__user.email}}>
+                                <input  class="input__number" type="number" name="valance__user" value="2000">
+                                <button type="submit" class="button__act__val">Actualizar Valance</button>
+                                
+                            </form>
+                            <form action="/int__admin" method="post">
+                                    <button type="submit" class="button__int__admin">Interar status admin</button>
+                                    <input type="hidden" name="hidden__email__2" value={{datos__user.email}}>
+                                </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

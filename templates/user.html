@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}bienvenido {{username}} {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+{% endblock %}
+{% block contend__main %}
+    <div class="container__user">
+        <div class="container__profile">
+            <div class="container__profile__l">
+                <h2 class="h2__username">
+                    <img class="img__icon__nav user__i" src="{{ url_for('static', filename='img/icon/user__main.ico') }}" alt="icono of home from the main navegator">
+                    {{username}}
+                </h2>
+                <p class="p__profile__email">
+                    {{email}}
+                </p>
+                {% if admin %}
+                        <form action="/admin" method="post" class="form__admin">
+                            <button class="buttom__admin" type="submit">Ir al panel de control</button>
+                        </form>
+                        
+                    {% else %}
+                        
+                    {% endif %}
+            </div>
+            <div class="container__profile__r">
+                <p class="p__profile__cripto">
+                        <img class="img__icon__nav" src="{{ url_for('static', filename='img/icon/dogecoin.ico') }}" alt="icono of home from the main navegator">
+                    {{cripto}}.00
+                </p>
+                <p class="p__profile__email">
+                    Admin Status: {{admin}}
+                </p>
+            </div>
+        </div>
+        <div class="simple__ninear__x"></div> 
+        <div class="container__opacity"></div> 
+        <div class="container__items">
+            {% for token in datos %}
+                    <div class="card__token">
+                        <img class="img__card" src={{token.url}} alt="image of token">
+                        <div class="container__card__text">
+                            <h3>{{token.title}}</h3>
+                            <p class="p__collection">{{token.collection}}</p>
+                            <p class="p__description">{{token.description}} </p>
+                            <p class="p__price">{{token.price}}.00 </p>
+                            <form action="/donate__token" method="post" >
+                                <button type="submit" class="button__buy__token button__coming">Donar a la Comnidad</button>
+                                <input type="hidden" name="hidden__key" value={{token.key}}>
+                            </form>
+                            
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

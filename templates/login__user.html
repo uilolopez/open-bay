@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon/ship__main__2.ico') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/noto/noto.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css/') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/nuber/nuber.css') }}">
+</head>
+<body>
+    <div class="container__main">
+        <div class="container__sec container__sec__info">
+            <div class="container__text div__container__text__h1">
+                <div class="container__img__super__main">
+                    <img class="img__super__main" src="{{ url_for('static', filename='img/icon/ship__main__2.ico') }}" alt="image of a ship that is the loge">
+                </div>
+                <h1>OpenBay</h1>
+            </div>
+            <div class="container__video__main">
+                <video autoplay loop muted preload="auto" playsinline class="video video__demo__main" src="{{url_for('static', filename='video/demo__main.mp4')}}"></video>
+            </div> 
+            <footer class="container__footer">
+                <div class="cotainer__a__foter">
+                    <a href="/contact" class="a__footer">Contactanos</a>
+                    <a href="" class="a__footer">Mas Recursos</a>
+                    <a href="" class="a__footer">terminos y condiciones</a>
+                </div>
+                <p class="p__footer__copy">
+                    &copy; 2024 OpenBay. Todos los derechos reservados.
+                </p>
+            </footer>
+        </div>
+        <div class="linear__standard__h"></div>
+        <main class="container__sec container__sec__form">
+            <h3 class="h3__text__plus" >Regresa a la Era Digital</h3>
+            <form method="POST" action="/login__user" class="form form__main__singup">
+                <h2 class="h2__text__Form" >Log In</h2>
+                <p class="if__problem"></p>
+                <input minlength="10" maxlength="20" required id="email__main" name="email__login" class="input__form__main" type="email" placeholder="Email">
+                <input minlength="5" maxlength="15" required id="password__main" name="password__login"  class="input__form__main" type="password" placeholder="Password">
+                <button class="button__main__singup" type="submit">Create</button>
+            </form>
+            <h4>¿No Tienes Una Cuenta?<br> <a href="/" class="a__h4">Crear Cuenta</a>.</h4>    
+        </main>
+    </div>
+    {%if user__repit%}
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    {%endif%}
+</body>
+</html>
