@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}more{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/more.css') }}">
+{% endblock %}
+
+{% block contend__main %}
+    <div class="container__more">
+        <h2>Sobre nosotros</h2>
+        <p>Bienvenidos a OpenBay, la plataforma líder para la compra, venta y descubrimiento de imágenes digitales exclusivas en el mundo de los NFTs. <br><br>
+        
+            ¿Qué Ofrecemos?
+            Colección Exclusiva: Descubre una amplia variedad de imágenes digitales, desde obras de arte únicas hasta fotografías y gráficos exclusivos.
+            Fácil de Usar: Nuestra plataforma intuitiva facilita la compra, venta y gestión de tus imágenes digitales.
+            Seguridad y Transparencia: Garantizamos la seguridad de las transacciones y la autenticidad de los activos mediante tecnología blockchain de última generación.
+        
+            Nuestra Comunidad
+            OpenBay es más que un mercado; es una comunidad global de entusiastas del arte digital. Fomentamos un entorno inclusivo donde todos pueden compartir su pasión por las imágenes digitales y la tecnología blockchain.
+            <br><br>
+        
+            Únete a Nosotros
+            Ya seas un artista, coleccionista o curioso, OpenBay te ofrece una experiencia única en el mundo de los NFTs de imágenes. Únete a nosotros y sé parte de esta emocionante revolución digital.
+            <br><br>
+        
+            Contáctanos
+            Si tienes preguntas o necesitas asistencia, nuestro equipo de soporte está aquí para ayudarte <a href="/contact">contáctanos</a>.
+        </p>
+    </div>
+{% endblock %}
